@@ -71,3 +71,4 @@ print(F.log_softmax(data, dim=0))
 # Using the vanilla Standard Gradient Descient algorithm is okay but using
 #  different algorithms for this such as Adam or RMSProp will boost performance
 """
+
