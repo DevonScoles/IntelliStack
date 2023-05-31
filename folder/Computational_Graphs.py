@@ -54,4 +54,3 @@ print("new var_z.grad_fn",new_var_z.grad_fn)
 # because we broke the variable chain when we ripped the tensor out of var_z using .data
 # and created new_var_z we have broken the variable chain and 
 # the loss Variable we create wont be able to realize the Variable exists
-

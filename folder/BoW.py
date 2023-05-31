@@ -73,6 +73,12 @@ log_probs = model(autograd.Variable(bow_vector))
 # print(log_probs)
 label_to_ix = {"SPANISH" : 0, "ENGLISH" : 1}
 
-print(next(model.parameters())[:,word_to_ix["creo"]]) 
-# print the matrix column representing "creo"
+
+# Run on test data before we train, just to see a before-and-after
+for instance, label in test_data:
+    bow_vec = autograd.Variable(make_bow_vector(instance, word_to_ix))
+    log_probs = model(bow_vec)
+    print(log_probs)
+    print (next(model.parameters())[:,word_to_ix["creo"]])
+    #print the matrix column corresponding to "creo"
 
